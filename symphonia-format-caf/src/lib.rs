@@ -1,5 +1,5 @@
 // Symphonia
-// Copyright (c) 2019-2022 The Project Symphonia Developers.
+// Copyright (c) 2019-2024 The Project Symphonia Developers.
 //
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -14,9 +14,7 @@
 #![allow(clippy::identity_op)]
 #![allow(clippy::manual_range_contains)]
 
-pub mod flac;
-pub mod id3v1;
-pub mod id3v2;
-pub mod itunes;
-pub mod riff;
-pub mod vorbis;
+mod chunks;
+mod demuxer;
+
+pub use demuxer::CafReader;
